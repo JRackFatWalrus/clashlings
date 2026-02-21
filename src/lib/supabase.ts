@@ -1,6 +1,11 @@
 import { createClient } from '@/lib/supabase/client';
 
-export const supabase = createClient();
+let _supabase: ReturnType<typeof createClient> | null = null;
+
+export function getSupabase() {
+  if (!_supabase) _supabase = createClient();
+  return _supabase;
+}
 
 export function isSupabaseConfigured(): boolean {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL || '';

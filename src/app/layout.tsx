@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Creature Clash - Toddler TCG",
+  title: "Clashlings - Junior TCG",
   description: "A fun card battling game for little learners!",
 };
 
